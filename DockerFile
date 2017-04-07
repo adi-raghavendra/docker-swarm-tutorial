@@ -28,6 +28,7 @@ ADD target/docker-swarm-tutorial-0.0.1-SNAPSHOT.jar /usr/docker-swarm-tutorial-0
 
 EXPOSE 8080
 
+HEALTHCHECK --interval=10s CMD wget -qO- localhost:8080/hello
 
 CMD java -jar /usr/docker-swarm-tutorial-0.0.1-SNAPSHOT.jar
 
